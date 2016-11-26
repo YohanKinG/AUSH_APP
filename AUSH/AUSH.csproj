@@ -948,6 +948,8 @@
     <Compile Include="Controllers\DistrictsController.cs" />
     <Compile Include="Controllers\AL_StreamController.cs" />
     <Compile Include="Controllers\Foundation_ResultController.cs" />
+    <Compile Include="Controllers\Selection_StatusController.cs" />
+    <Compile Include="Views\SubjectGradesController.cs" />
     <Compile Include="ZScore.cs">
       <DependentUpon>AUSHDataModel.tt</DependentUpon>
     </Compile>
@@ -1026,6 +1028,16 @@
     <Content Include="Views\Foundation_Result\Details.cshtml" />
     <Content Include="Views\Foundation_Result\Edit.cshtml" />
     <Content Include="Views\Foundation_Result\Index.cshtml" />
+    <Content Include="Views\Selection_Status\Create.cshtml" />
+    <Content Include="Views\Selection_Status\Delete.cshtml" />
+    <Content Include="Views\Selection_Status\Details.cshtml" />
+    <Content Include="Views\Selection_Status\Edit.cshtml" />
+    <Content Include="Views\Selection_Status\Index.cshtml" />
+    <Content Include="Views\SubjectGrades\Create.cshtml" />
+    <Content Include="Views\SubjectGrades\Delete.cshtml" />
+    <Content Include="Views\SubjectGrades\Details.cshtml" />
+    <Content Include="Views\SubjectGrades\Edit.cshtml" />
+    <Content Include="Views\SubjectGrades\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

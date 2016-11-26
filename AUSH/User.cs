@@ -31,7 +31,6 @@ namespace AUSH
         public string Gender { get; set; }
         public string Email { get; set; }
         public string ContactNo { get; set; }
-        public string profileImage { get; set; }
     
         public virtual Applicant_Application Applicant_Application { get; set; }
         public virtual Applicant_Extra Applicant_Extra { get; set; }

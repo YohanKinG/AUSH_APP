@@ -11,7 +11,8 @@ namespace AUSH
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class SubjectGrade
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,6 +28,8 @@ namespace AUSH
         }
     
         public int GradeID { get; set; }
+        [Required]
+        [Display(Name = "Grade Notation")]
         public string Grade { get; set; }
         public string Description { get; set; }
     
