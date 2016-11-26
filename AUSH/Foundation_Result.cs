@@ -11,7 +11,8 @@ namespace AUSH
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Foundation_Result
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace AUSH
         }
     
         public int FoundationResultID { get; set; }
+        [Required]
+        [Display(Name = "Result Type")]
         public string Type { get; set; }
         public string Description { get; set; }
     
