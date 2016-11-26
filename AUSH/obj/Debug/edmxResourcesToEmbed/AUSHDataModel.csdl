@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AUSH_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AL_Curriculum">
+    <Key>
+      <PropertyRef Name="ALCurID" />
+    </Key>
+    <Property Name="ALCurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ZorMean" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_AL_Curriculum" FromRole="AL_Curriculum" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="AL_Stream">
+    <Key>
+      <PropertyRef Name="StreamID" />
+    </Key>
+    <Property Name="StreamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_AL_Stream" FromRole="AL_Stream" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Subject1" Relationship="Self.FK_Subject1_AL_Stream" FromRole="AL_Stream" ToRole="Subject1" />
+    <NavigationProperty Name="Subject2" Relationship="Self.FK_Subject2_AL_Stream" FromRole="AL_Stream" ToRole="Subject2" />
+    <NavigationProperty Name="Subject3" Relationship="Self.FK_Subject3_AL_Stream" FromRole="AL_Stream" ToRole="Subject3" />
+  </EntityType>
+  <EntityType Name="Applicant_Application">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="Int32" Nullable="false" />
+    <Property Name="ALCurID" Type="Int32" Nullable="false" />
+    <Property Name="OLCurID" Type="Int32" Nullable="false" />
+    <Property Name="StreamID" Type="Int32" Nullable="false" />
+    <Property Name="ZScoreID" Type="Int32" Nullable="false" />
+    <Property Name="MeanID" Type="Int32" Nullable="false" />
+    <Property Name="Subject1ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject1GradeID" Type="Int32" Nullable="false" />
+    <Property Name="Subject2ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject2GradeID" Type="Int32" Nullable="false" />
+    <Property Name="Subject3ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject3GradeID" Type="Int32" Nullable="false" />
+    <Property Name="EnglishGradeID" Type="Int32" Nullable="false" />
+    <Property Name="OLMathsGradeID" Type="Int32" Nullable="false" />
+    <Property Name="OLEnglishGradeID" Type="Int32" Nullable="false" />
+    <Property Name="OLScienceGradeID" Type="Int32" Nullable="false" />
+    <Property Name="FoundationResultID" Type="Int32" Nullable="false" />
+    <Property Name="DistrictID" Type="Int32" Nullable="false" />
+    <Property Name="DegreeID" Type="Int32" Nullable="false" />
+    <Property Name="SelectionStatusID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AL_Curriculum" Relationship="Self.FK_Applicant_Application_AL_Curriculum" FromRole="Applicant_Application" ToRole="AL_Curriculum" />
+    <NavigationProperty Name="AL_Stream" Relationship="Self.FK_Applicant_Application_AL_Stream" FromRole="Applicant_Application" ToRole="AL_Stream" />
+    <NavigationProperty Name="DegreeProgram" Relationship="Self.FK_Applicant_Application_DegreeProgram" FromRole="Applicant_Application" ToRole="DegreeProgram" />
+    <NavigationProperty Name="District" Relationship="Self.FK_Applicant_Application_District" FromRole="Applicant_Application" ToRole="District" />
+    <NavigationProperty Name="Foundation_Result" Relationship="Self.FK_Applicant_Application_Foundation_Result" FromRole="Applicant_Application" ToRole="Foundation_Result" />
+    <NavigationProperty Name="MeanResult" Relationship="Self.FK_Applicant_Application_MeanResult" FromRole="Applicant_Application" ToRole="MeanResult" />
+    <NavigationProperty Name="OL_Curriculum" Relationship="Self.FK_Applicant_Application_OL_Curriculum" FromRole="Applicant_Application" ToRole="OL_Curriculum" />
+    <NavigationProperty Name="Selection_Status" Relationship="Self.FK_Applicant_Application_Selection_Status" FromRole="Applicant_Application" ToRole="Selection_Status" />
+    <NavigationProperty Name="Subject1" Relationship="Self.FK_Applicant_Application_Subject1" FromRole="Applicant_Application" ToRole="Subject1" />
+    <NavigationProperty Name="Subject2" Relationship="Self.FK_Applicant_Application_Subject2" FromRole="Applicant_Application" ToRole="Subject2" />
+    <NavigationProperty Name="Subject3" Relationship="Self.FK_Applicant_Application_Subject3" FromRole="Applicant_Application" ToRole="Subject3" />
+    <NavigationProperty Name="SubjectGrade" Relationship="Self.FK_Applicant_Application_SubjectGrade" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="SubjectGrade1" Relationship="Self.FK_Applicant_Application_SubjectGrade1" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="SubjectGrade2" Relationship="Self.FK_Applicant_Application_SubjectGrade2" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="SubjectGrade3" Relationship="Self.FK_Applicant_Application_SubjectGrade3" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="SubjectGrade4" Relationship="Self.FK_Applicant_Application_SubjectGrade4" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="SubjectGrade5" Relationship="Self.FK_Applicant_Application_SubjectGrade5" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="SubjectGrade6" Relationship="Self.FK_Applicant_Application_SubjectGrade6" FromRole="Applicant_Application" ToRole="SubjectGrade" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Applicant_Application_User" FromRole="Applicant_Application" ToRole="User" />
+    <NavigationProperty Name="ZScore" Relationship="Self.FK_Applicant_Application_ZScore" FromRole="Applicant_Application" ToRole="ZScore" />
+    <NavigationProperty Name="Applicant_Date" Relationship="Self.FK_Applicant_Date_Applicant_Application" FromRole="Applicant_Application" ToRole="Applicant_Date" />
+  </EntityType>
+  <EntityType Name="Applicant_Date">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Date_Applicant_Application" FromRole="Applicant_Date" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="Applicant_Extra">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="Int32" Nullable="false" />
+    <Property Name="ExtraID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SportsnExtra_Level" Relationship="Self.FK_Applicant_Extra_SportsnExtra_Level" FromRole="Applicant_Extra" ToRole="SportsnExtra_Level" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Applicant_Extra_User" FromRole="Applicant_Extra" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Applicant_Sports">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="Int32" Nullable="false" />
+    <Property Name="SportsID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SportsnExtra_Level" Relationship="Self.FK_Applicant_Sports_SportsnExtra_Level" FromRole="Applicant_Sports" ToRole="SportsnExtra_Level" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Applicant_Sports_User" FromRole="Applicant_Sports" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DegreeProgram">
+    <Key>
+      <PropertyRef Name="DegreeID" />
+    </Key>
+    <Property Name="DegreeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_DegreeProgram" FromRole="DegreeProgram" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="DistrictID" />
+    </Key>
+    <Property Name="DistrictID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_District" FromRole="District" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="Foundation_Result">
+    <Key>
+      <PropertyRef Name="FoundationResultID" />
+    </Key>
+    <Property Name="FoundationResultID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_Foundation_Result" FromRole="Foundation_Result" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="IQQuestion">
+    <Key>
+      <PropertyRef Name="QuestionID" />
+    </Key>
+    <Property Name="QuestionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Answer1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Answer2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Answer3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Answer4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CorrectAnswer" Type="Int16" Nullable="false" />
+    <Property Name="AddedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_IQQuestions_User" FromRole="IQQuestions" ToRole="User" />
+  </EntityType>
+  <EntityType Name="LoginUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProfPicID" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PasswordHint" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_LoginUser_User" FromRole="LoginUser" ToRole="User" />
+  </EntityType>
+  <EntityType Name="MeanResult">
+    <Key>
+      <PropertyRef Name="MeanID" />
+    </Key>
+    <Property Name="MeanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpperBound" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="LowerBound" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_MeanResult" FromRole="MeanResult" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="OL_Curriculum">
+    <Key>
+      <PropertyRef Name="OLCurID" />
+    </Key>
+    <Property Name="OLCurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_OL_Curriculum" FromRole="OL_Curriculum" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="Selection_Status">
+    <Key>
+      <PropertyRef Name="SelectionStatusID" />
+    </Key>
+    <Property Name="SelectionStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_Selection_Status" FromRole="Selection_Status" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="SportsnExtra_Level">
+    <Key>
+      <PropertyRef Name="SprtnExtraID" />
+    </Key>
+    <Property Name="SprtnExtraID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Extra" Relationship="Self.FK_Applicant_Extra_SportsnExtra_Level" FromRole="SportsnExtra_Level" ToRole="Applicant_Extra" />
+    <NavigationProperty Name="Applicant_Sports" Relationship="Self.FK_Applicant_Sports_SportsnExtra_Level" FromRole="SportsnExtra_Level" ToRole="Applicant_Sports" />
+  </EntityType>
+  <EntityType Name="Subject1">
+    <Key>
+      <PropertyRef Name="Subject1ID" />
+    </Key>
+    <Property Name="Subject1ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StreamID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AL_Stream" Relationship="Self.FK_Subject1_AL_Stream" FromRole="Subject1" ToRole="AL_Stream" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_Subject1" FromRole="Subject1" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="Subject2">
+    <Key>
+      <PropertyRef Name="Subject2ID" />
+    </Key>
+    <Property Name="Subject2ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StreamID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AL_Stream" Relationship="Self.FK_Subject2_AL_Stream" FromRole="Subject2" ToRole="AL_Stream" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_Subject2" FromRole="Subject2" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="Subject3">
+    <Key>
+      <PropertyRef Name="Subject3ID" />
+    </Key>
+    <Property Name="Subject3ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StreamID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AL_Stream" Relationship="Self.FK_Subject3_AL_Stream" FromRole="Subject3" ToRole="AL_Stream" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_Subject3" FromRole="Subject3" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="SubjectGrade">
+    <Key>
+      <PropertyRef Name="GradeID" />
+    </Key>
+    <Property Name="GradeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grade" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_SubjectGrade" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Application1" Relationship="Self.FK_Applicant_Application_SubjectGrade1" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Application2" Relationship="Self.FK_Applicant_Application_SubjectGrade2" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Application3" Relationship="Self.FK_Applicant_Application_SubjectGrade3" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Application4" Relationship="Self.FK_Applicant_Application_SubjectGrade4" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Application5" Relationship="Self.FK_Applicant_Application_SubjectGrade5" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Application6" Relationship="Self.FK_Applicant_Application_SubjectGrade6" FromRole="SubjectGrade" ToRole="Applicant_Application" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="profileImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_User" FromRole="User" ToRole="Applicant_Application" />
+    <NavigationProperty Name="Applicant_Extra" Relationship="Self.FK_Applicant_Extra_User" FromRole="User" ToRole="Applicant_Extra" />
+    <NavigationProperty Name="Applicant_Sports" Relationship="Self.FK_Applicant_Sports_User" FromRole="User" ToRole="Applicant_Sports" />
+    <NavigationProperty Name="IQQuestions" Relationship="Self.FK_IQQuestions_User" FromRole="User" ToRole="IQQuestions" />
+    <NavigationProperty Name="LoginUser" Relationship="Self.FK_LoginUser_User" FromRole="User" ToRole="LoginUser" />
+  </EntityType>
+  <EntityType Name="ZScore">
+    <Key>
+      <PropertyRef Name="ZScoreID" />
+    </Key>
+    <Property Name="ZScoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpperBound" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="LowerBound" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_ZScore" FromRole="ZScore" ToRole="Applicant_Application" />
+  </EntityType>
+  <Association Name="FK_Applicant_Application_AL_Curriculum">
+    <End Role="AL_Curriculum" Type="Self.AL_Curriculum" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AL_Curriculum">
+        <PropertyRef Name="ALCurID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="ALCurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_AL_Stream">
+    <End Role="AL_Stream" Type="Self.AL_Stream" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AL_Stream">
+        <PropertyRef Name="StreamID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="StreamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subject1_AL_Stream">
+    <End Role="AL_Stream" Type="Self.AL_Stream" Multiplicity="1" />
+    <End Role="Subject1" Type="Self.Subject1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AL_Stream">
+        <PropertyRef Name="StreamID" />
+      </Principal>
+      <Dependent Role="Subject1">
+        <PropertyRef Name="StreamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subject2_AL_Stream">
+    <End Role="AL_Stream" Type="Self.AL_Stream" Multiplicity="1" />
+    <End Role="Subject2" Type="Self.Subject2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AL_Stream">
+        <PropertyRef Name="StreamID" />
+      </Principal>
+      <Dependent Role="Subject2">
+        <PropertyRef Name="StreamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subject3_AL_Stream">
+    <End Role="AL_Stream" Type="Self.AL_Stream" Multiplicity="1" />
+    <End Role="Subject3" Type="Self.Subject3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AL_Stream">
+        <PropertyRef Name="StreamID" />
+      </Principal>
+      <Dependent Role="Subject3">
+        <PropertyRef Name="StreamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_DegreeProgram">
+    <End Role="DegreeProgram" Type="Self.DegreeProgram" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DegreeProgram">
+        <PropertyRef Name="DegreeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="DegreeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_District">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="DistrictID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_Foundation_Result">
+    <End Role="Foundation_Result" Type="Self.Foundation_Result" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Foundation_Result">
+        <PropertyRef Name="FoundationResultID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="FoundationResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_MeanResult">
+    <End Role="MeanResult" Type="Self.MeanResult" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MeanResult">
+        <PropertyRef Name="MeanID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="MeanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_OL_Curriculum">
+    <End Role="OL_Curriculum" Type="Self.OL_Curriculum" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OL_Curriculum">
+        <PropertyRef Name="OLCurID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="OLCurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_Selection_Status">
+    <End Role="Selection_Status" Type="Self.Selection_Status" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Selection_Status">
+        <PropertyRef Name="SelectionStatusID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="SelectionStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_Subject1">
+    <End Role="Subject1" Type="Self.Subject1" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject1">
+        <PropertyRef Name="Subject1ID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="Subject1ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_Subject2">
+    <End Role="Subject2" Type="Self.Subject2" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject2">
+        <PropertyRef Name="Subject2ID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="Subject2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_Subject3">
+    <End Role="Subject3" Type="Self.Subject3" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject3">
+        <PropertyRef Name="Subject3ID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="Subject3ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="Subject1GradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade1">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="Subject2GradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade2">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="Subject3GradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade3">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="EnglishGradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade4">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="OLEnglishGradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade5">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="OLMathsGradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_SubjectGrade6">
+    <End Role="SubjectGrade" Type="Self.SubjectGrade" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubjectGrade">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="OLScienceGradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Application_ZScore">
+    <End Role="ZScore" Type="Self.ZScore" Multiplicity="1" />
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZScore">
+        <PropertyRef Name="ZScoreID" />
+      </Principal>
+      <Dependent Role="Applicant_Application">
+        <PropertyRef Name="ZScoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Date_Applicant_Application">
+    <End Role="Applicant_Application" Type="Self.Applicant_Application" Multiplicity="1" />
+    <End Role="Applicant_Date" Type="Self.Applicant_Date" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Applicant_Application">
+        <PropertyRef Name="ApplicantID" />
+      </Principal>
+      <Dependent Role="Applicant_Date">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Extra_SportsnExtra_Level">
+    <End Role="SportsnExtra_Level" Type="Self.SportsnExtra_Level" Multiplicity="1" />
+    <End Role="Applicant_Extra" Type="Self.Applicant_Extra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SportsnExtra_Level">
+        <PropertyRef Name="SprtnExtraID" />
+      </Principal>
+      <Dependent Role="Applicant_Extra">
+        <PropertyRef Name="ExtraID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Extra_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Applicant_Extra" Type="Self.Applicant_Extra" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Applicant_Extra">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Sports_SportsnExtra_Level">
+    <End Role="SportsnExtra_Level" Type="Self.SportsnExtra_Level" Multiplicity="1" />
+    <End Role="Applicant_Sports" Type="Self.Applicant_Sports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SportsnExtra_Level">
+        <PropertyRef Name="SprtnExtraID" />
+      </Principal>
+      <Dependent Role="Applicant_Sports">
+        <PropertyRef Name="SportsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicant_Sports_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Applicant_Sports" Type="Self.Applicant_Sports" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Applicant_Sports">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IQQuestions_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="IQQuestions" Type="Self.IQQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="IQQuestions">
+        <PropertyRef Name="AddedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginUser_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="LoginUser" Type="Self.LoginUser" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="LoginUser">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AUSH_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AL_Curriculum" EntityType="Self.AL_Curriculum" />
+    <EntitySet Name="AL_Stream" EntityType="Self.AL_Stream" />
+    <EntitySet Name="Applicant_Application" EntityType="Self.Applicant_Application" />
+    <EntitySet Name="Applicant_Date" EntityType="Self.Applicant_Date" />
+    <EntitySet Name="Applicant_Extra" EntityType="Self.Applicant_Extra" />
+    <EntitySet Name="Applicant_Sports" EntityType="Self.Applicant_Sports" />
+    <EntitySet Name="DegreePrograms" EntityType="Self.DegreeProgram" />
+    <EntitySet Name="Districts" EntityType="Self.District" />
+    <EntitySet Name="Foundation_Result" EntityType="Self.Foundation_Result" />
+    <EntitySet Name="IQQuestions" EntityType="Self.IQQuestion" />
+    <EntitySet Name="LoginUsers" EntityType="Self.LoginUser" />
+    <EntitySet Name="MeanResults" EntityType="Self.MeanResult" />
+    <EntitySet Name="OL_Curriculum" EntityType="Self.OL_Curriculum" />
+    <EntitySet Name="Selection_Status" EntityType="Self.Selection_Status" />
+    <EntitySet Name="SportsnExtra_Level" EntityType="Self.SportsnExtra_Level" />
+    <EntitySet Name="Subject1" EntityType="Self.Subject1" />
+    <EntitySet Name="Subject2" EntityType="Self.Subject2" />
+    <EntitySet Name="Subject3" EntityType="Self.Subject3" />
+    <EntitySet Name="SubjectGrades" EntityType="Self.SubjectGrade" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="ZScores" EntityType="Self.ZScore" />
+    <AssociationSet Name="FK_Applicant_Application_AL_Curriculum" Association="Self.FK_Applicant_Application_AL_Curriculum">
+      <End Role="AL_Curriculum" EntitySet="AL_Curriculum" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_AL_Stream" Association="Self.FK_Applicant_Application_AL_Stream">
+      <End Role="AL_Stream" EntitySet="AL_Stream" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subject1_AL_Stream" Association="Self.FK_Subject1_AL_Stream">
+      <End Role="AL_Stream" EntitySet="AL_Stream" />
+      <End Role="Subject1" EntitySet="Subject1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subject2_AL_Stream" Association="Self.FK_Subject2_AL_Stream">
+      <End Role="AL_Stream" EntitySet="AL_Stream" />
+      <End Role="Subject2" EntitySet="Subject2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subject3_AL_Stream" Association="Self.FK_Subject3_AL_Stream">
+      <End Role="AL_Stream" EntitySet="AL_Stream" />
+      <End Role="Subject3" EntitySet="Subject3" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_DegreeProgram" Association="Self.FK_Applicant_Application_DegreeProgram">
+      <End Role="DegreeProgram" EntitySet="DegreePrograms" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_District" Association="Self.FK_Applicant_Application_District">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_Foundation_Result" Association="Self.FK_Applicant_Application_Foundation_Result">
+      <End Role="Foundation_Result" EntitySet="Foundation_Result" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_MeanResult" Association="Self.FK_Applicant_Application_MeanResult">
+      <End Role="MeanResult" EntitySet="MeanResults" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_OL_Curriculum" Association="Self.FK_Applicant_Application_OL_Curriculum">
+      <End Role="OL_Curriculum" EntitySet="OL_Curriculum" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_Selection_Status" Association="Self.FK_Applicant_Application_Selection_Status">
+      <End Role="Selection_Status" EntitySet="Selection_Status" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_Subject1" Association="Self.FK_Applicant_Application_Subject1">
+      <End Role="Subject1" EntitySet="Subject1" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_Subject2" Association="Self.FK_Applicant_Application_Subject2">
+      <End Role="Subject2" EntitySet="Subject2" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_Subject3" Association="Self.FK_Applicant_Application_Subject3">
+      <End Role="Subject3" EntitySet="Subject3" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade" Association="Self.FK_Applicant_Application_SubjectGrade">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade1" Association="Self.FK_Applicant_Application_SubjectGrade1">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade2" Association="Self.FK_Applicant_Application_SubjectGrade2">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade3" Association="Self.FK_Applicant_Application_SubjectGrade3">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade4" Association="Self.FK_Applicant_Application_SubjectGrade4">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade5" Association="Self.FK_Applicant_Application_SubjectGrade5">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_SubjectGrade6" Association="Self.FK_Applicant_Application_SubjectGrade6">
+      <End Role="SubjectGrade" EntitySet="SubjectGrades" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_User" Association="Self.FK_Applicant_Application_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Application_ZScore" Association="Self.FK_Applicant_Application_ZScore">
+      <End Role="ZScore" EntitySet="ZScores" />
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Date_Applicant_Application" Association="Self.FK_Applicant_Date_Applicant_Application">
+      <End Role="Applicant_Application" EntitySet="Applicant_Application" />
+      <End Role="Applicant_Date" EntitySet="Applicant_Date" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Extra_SportsnExtra_Level" Association="Self.FK_Applicant_Extra_SportsnExtra_Level">
+      <End Role="SportsnExtra_Level" EntitySet="SportsnExtra_Level" />
+      <End Role="Applicant_Extra" EntitySet="Applicant_Extra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Extra_User" Association="Self.FK_Applicant_Extra_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Applicant_Extra" EntitySet="Applicant_Extra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Sports_SportsnExtra_Level" Association="Self.FK_Applicant_Sports_SportsnExtra_Level">
+      <End Role="SportsnExtra_Level" EntitySet="SportsnExtra_Level" />
+      <End Role="Applicant_Sports" EntitySet="Applicant_Sports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicant_Sports_User" Association="Self.FK_Applicant_Sports_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Applicant_Sports" EntitySet="Applicant_Sports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IQQuestions_User" Association="Self.FK_IQQuestions_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="IQQuestions" EntitySet="IQQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginUser_User" Association="Self.FK_LoginUser_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="LoginUser" EntitySet="LoginUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

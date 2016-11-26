@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0dbe5e5b739b460a8f56907535374261" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="AUSH_DBModel.AL_Curriculum" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.AL_Stream" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Applicant_Application" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Applicant_Date" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Applicant_Extra" Width="1.5" PointX="10" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Applicant_Sports" Width="1.5" PointX="10" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.DegreeProgram" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.District" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Foundation_Result" Width="1.5" PointX="0.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.IQQuestion" Width="1.5" PointX="3" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.LoginUser" Width="1.5" PointX="3" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.MeanResult" Width="1.5" PointX="0.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.OL_Curriculum" Width="1.5" PointX="0.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Selection_Status" Width="1.5" PointX="0.75" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.SportsnExtra_Level" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Subject1" Width="1.5" PointX="0.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Subject2" Width="1.5" PointX="0.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.Subject3" Width="1.5" PointX="0.75" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.SubjectGrade" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.sysdiagram" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.User" Width="1.5" PointX="0.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AUSH_DBModel.ZScore" Width="1.5" PointX="0.75" PointY="43.5" IsExpanded="true" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_AL_Curriculum" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_AL_Stream" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Subject1_AL_Stream" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Subject2_AL_Stream" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Subject3_AL_Stream" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_DegreeProgram" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_District" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_Foundation_Result" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_MeanResult" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_OL_Curriculum" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_Selection_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_Subject1" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_Subject2" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_Subject3" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade1" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade2" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade3" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade4" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade5" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_SubjectGrade6" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Application_ZScore" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Date_Applicant_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Extra_SportsnExtra_Level" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Extra_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Sports_SportsnExtra_Level" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_Applicant_Sports_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_IQQuestions_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AUSH_DBModel.FK_LoginUser_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -56,6 +56,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -97,6 +99,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AUSHDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AUSHDataModel.edmx</DependentUpon>
+      <LastGenOutput>AUSHDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AUSHDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AUSHDataModel.edmx</DependentUpon>
+      <LastGenOutput>AUSHDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
     <Content Include="Content\bootstrap\css\bootstrap.min.css" />
@@ -837,12 +849,93 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AL_Curriculum.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AL_Stream.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant_Application.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant_Date.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant_Extra.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant_Sports.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AUSHDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUSHDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUSHDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUSHDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUSHDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DegreeProgram.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="District.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Foundation_Result.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IQQuestion.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUser.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MeanResult.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OL_Curriculum.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Selection_Status.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SportsnExtra_Level.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject1.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject2.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject3.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGrade.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZScore.cs">
+      <DependentUpon>AUSHDataModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -875,6 +968,13 @@
     <Content Include="Content\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Content\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Views\Home\Index.cshtml" />
+    <EntityDeploy Include="AUSHDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AUSHDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="AUSHDataModel.edmx.diagram">
+      <DependentUpon>AUSHDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -885,6 +985,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

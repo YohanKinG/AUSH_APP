@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AUSH_DBModelStoreContainer" CdmEntityContainer="AUSH_DBEntities">
+    <EntitySetMapping Name="AL_Curriculum">
+      <EntityTypeMapping TypeName="AUSH_DBModel.AL_Curriculum">
+        <MappingFragment StoreEntitySet="AL_Curriculum">
+          <ScalarProperty Name="ALCurID" ColumnName="ALCurID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ZorMean" ColumnName="ZorMean" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AL_Stream">
+      <EntityTypeMapping TypeName="AUSH_DBModel.AL_Stream">
+        <MappingFragment StoreEntitySet="AL_Stream">
+          <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applicant_Application">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Applicant_Application">
+        <MappingFragment StoreEntitySet="Applicant_Application">
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="ALCurID" ColumnName="ALCurID" />
+          <ScalarProperty Name="OLCurID" ColumnName="OLCurID" />
+          <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+          <ScalarProperty Name="ZScoreID" ColumnName="ZScoreID" />
+          <ScalarProperty Name="MeanID" ColumnName="MeanID" />
+          <ScalarProperty Name="Subject1ID" ColumnName="Subject1ID" />
+          <ScalarProperty Name="Subject1GradeID" ColumnName="Subject1GradeID" />
+          <ScalarProperty Name="Subject2ID" ColumnName="Subject2ID" />
+          <ScalarProperty Name="Subject2GradeID" ColumnName="Subject2GradeID" />
+          <ScalarProperty Name="Subject3ID" ColumnName="Subject3ID" />
+          <ScalarProperty Name="Subject3GradeID" ColumnName="Subject3GradeID" />
+          <ScalarProperty Name="EnglishGradeID" ColumnName="EnglishGradeID" />
+          <ScalarProperty Name="OLMathsGradeID" ColumnName="OLMathsGradeID" />
+          <ScalarProperty Name="OLEnglishGradeID" ColumnName="OLEnglishGradeID" />
+          <ScalarProperty Name="OLScienceGradeID" ColumnName="OLScienceGradeID" />
+          <ScalarProperty Name="FoundationResultID" ColumnName="FoundationResultID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+          <ScalarProperty Name="SelectionStatusID" ColumnName="SelectionStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applicant_Date">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Applicant_Date">
+        <MappingFragment StoreEntitySet="Applicant_Date">
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applicant_Extra">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Applicant_Extra">
+        <MappingFragment StoreEntitySet="Applicant_Extra">
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="ExtraID" ColumnName="ExtraID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applicant_Sports">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Applicant_Sports">
+        <MappingFragment StoreEntitySet="Applicant_Sports">
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="SportsID" ColumnName="SportsID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DegreePrograms">
+      <EntityTypeMapping TypeName="AUSH_DBModel.DegreeProgram">
+        <MappingFragment StoreEntitySet="DegreeProgram">
+          <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Districts">
+      <EntityTypeMapping TypeName="AUSH_DBModel.District">
+        <MappingFragment StoreEntitySet="District">
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Foundation_Result">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Foundation_Result">
+        <MappingFragment StoreEntitySet="Foundation_Result">
+          <ScalarProperty Name="FoundationResultID" ColumnName="FoundationResultID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IQQuestions">
+      <EntityTypeMapping TypeName="AUSH_DBModel.IQQuestion">
+        <MappingFragment StoreEntitySet="IQQuestions">
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+          <ScalarProperty Name="Answer2" ColumnName="Answer2" />
+          <ScalarProperty Name="Answer3" ColumnName="Answer3" />
+          <ScalarProperty Name="Answer4" ColumnName="Answer4" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginUsers">
+      <EntityTypeMapping TypeName="AUSH_DBModel.LoginUser">
+        <MappingFragment StoreEntitySet="LoginUser">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ProfPicID" ColumnName="ProfPicID" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="PasswordHint" ColumnName="PasswordHint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MeanResults">
+      <EntityTypeMapping TypeName="AUSH_DBModel.MeanResult">
+        <MappingFragment StoreEntitySet="MeanResult">
+          <ScalarProperty Name="MeanID" ColumnName="MeanID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UpperBound" ColumnName="UpperBound" />
+          <ScalarProperty Name="LowerBound" ColumnName="LowerBound" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OL_Curriculum">
+      <EntityTypeMapping TypeName="AUSH_DBModel.OL_Curriculum">
+        <MappingFragment StoreEntitySet="OL_Curriculum">
+          <ScalarProperty Name="OLCurID" ColumnName="OLCurID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Selection_Status">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Selection_Status">
+        <MappingFragment StoreEntitySet="Selection_Status">
+          <ScalarProperty Name="SelectionStatusID" ColumnName="SelectionStatusID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SportsnExtra_Level">
+      <EntityTypeMapping TypeName="AUSH_DBModel.SportsnExtra_Level">
+        <MappingFragment StoreEntitySet="SportsnExtra_Level">
+          <ScalarProperty Name="SprtnExtraID" ColumnName="SprtnExtraID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject1">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Subject1">
+        <MappingFragment StoreEntitySet="Subject1">
+          <ScalarProperty Name="Subject1ID" ColumnName="Subject1ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject2">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Subject2">
+        <MappingFragment StoreEntitySet="Subject2">
+          <ScalarProperty Name="Subject2ID" ColumnName="Subject2ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject3">
+      <EntityTypeMapping TypeName="AUSH_DBModel.Subject3">
+        <MappingFragment StoreEntitySet="Subject3">
+          <ScalarProperty Name="Subject3ID" ColumnName="Subject3ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectGrades">
+      <EntityTypeMapping TypeName="AUSH_DBModel.SubjectGrade">
+        <MappingFragment StoreEntitySet="SubjectGrade">
+          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AUSH_DBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="AUSH_DBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="IDNo" ColumnName="IDNo" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="profileImage" ColumnName="profileImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZScores">
+      <EntityTypeMapping TypeName="AUSH_DBModel.ZScore">
+        <MappingFragment StoreEntitySet="ZScore">
+          <ScalarProperty Name="ZScoreID" ColumnName="ZScoreID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UpperBound" ColumnName="UpperBound" />
+          <ScalarProperty Name="LowerBound" ColumnName="LowerBound" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
