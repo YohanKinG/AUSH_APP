@@ -101,10 +101,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="#" class="btn btn-success btn-flat btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="#" class="btn btn-success btn-flat btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -166,12 +166,11 @@
         </aside>
 
         <div class="content-wrapper">
-            <section class="content-header">
+            @*<section class="content-header">
                 <h1>
                     @ViewBag.PageHeader
-                    <small>Version 2.0</small>
                 </h1>
-            </section>
+            </section>*@
 
             <section class="content">
                 @RenderBody()
@@ -179,9 +178,9 @@
         </div>
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
-                <b>Version</b> 2.0
+                <b>Version</b> 1.0
             </div>
-            <strong>Copyright &copy; 2014-2015 <a href="http://www.abcuniversityofatlanta.com/">ABC Universities</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; @DateTime.Today.Year <a href="http://www.abcuniversityofatlanta.com/">ABC Universities</a>.</strong> All rights reserved.
         </footer>
     </div> <!--End of wrapper Class-->
 

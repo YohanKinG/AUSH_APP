@@ -7,7 +7,7 @@
     <Property Name="ALCurID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="500" />
-    <Property Name="ZorMean" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ZorMean" Type="nvarchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <EntityType Name="AL_Stream">
     <Key>

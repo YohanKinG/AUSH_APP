@@ -7,7 +7,7 @@
     <Property Name="ALCurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="ZorMean" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ZorMean" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Applicant_Application" Relationship="Self.FK_Applicant_Application_AL_Curriculum" FromRole="AL_Curriculum" ToRole="Applicant_Application" />
   </EntityType>
   <EntityType Name="AL_Stream">
