@@ -949,7 +949,7 @@
     <Compile Include="Controllers\AL_StreamController.cs" />
     <Compile Include="Controllers\Foundation_ResultController.cs" />
     <Compile Include="Controllers\Selection_StatusController.cs" />
-    <Compile Include="Views\SubjectGradesController.cs" />
+    <Compile Include="Controllers\SubjectGradesController.cs" />
     <Compile Include="ZScore.cs">
       <DependentUpon>AUSHDataModel.tt</DependentUpon>
     </Compile>
