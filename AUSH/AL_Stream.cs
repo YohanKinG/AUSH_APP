@@ -11,7 +11,8 @@ namespace AUSH
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class AL_Stream
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,6 +25,8 @@ namespace AUSH
         }
     
         public int StreamID { get; set; }
+        [Required]
+        [Display(Name = "Stream Name")]
         public string Name { get; set; }
         public string Description { get; set; }
     
