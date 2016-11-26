@@ -944,6 +944,8 @@
     <Compile Include="Controllers\OL_CurriculumController.cs" />
     <Compile Include="Controllers\AL_CurriculumController.cs" />
     <Compile Include="Controllers\SportsnExtra_LevelController.cs" />
+    <Compile Include="Controllers\DegreeProgramsController.cs" />
+    <Compile Include="Views\DistrictsController.cs" />
     <Compile Include="ZScore.cs">
       <DependentUpon>AUSHDataModel.tt</DependentUpon>
     </Compile>
@@ -1002,6 +1004,16 @@
     <Content Include="Views\SportsnExtra_Level\Details.cshtml" />
     <Content Include="Views\SportsnExtra_Level\Edit.cshtml" />
     <Content Include="Views\SportsnExtra_Level\Index.cshtml" />
+    <Content Include="Views\DegreePrograms\Create.cshtml" />
+    <Content Include="Views\DegreePrograms\Delete.cshtml" />
+    <Content Include="Views\DegreePrograms\Details.cshtml" />
+    <Content Include="Views\DegreePrograms\Edit.cshtml" />
+    <Content Include="Views\DegreePrograms\Index.cshtml" />
+    <Content Include="Views\Districts\Create.cshtml" />
+    <Content Include="Views\Districts\Delete.cshtml" />
+    <Content Include="Views\Districts\Details.cshtml" />
+    <Content Include="Views\Districts\Edit.cshtml" />
+    <Content Include="Views\Districts\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

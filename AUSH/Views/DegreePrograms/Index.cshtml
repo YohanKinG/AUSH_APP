@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AUSH.DegreeProgram>
+
+@{
+    ViewBag.Title = "Current Records";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Current Records</h2>
+<h4>Degree Program</h4>
+<br/>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DegreeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DegreeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DegreeID })
+        </td>
+    </tr>
+}
+
+</table>
