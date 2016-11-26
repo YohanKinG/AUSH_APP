@@ -11,7 +11,8 @@ namespace AUSH
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class AL_Curriculum
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,8 +22,13 @@ namespace AUSH
         }
     
         public int ALCurID { get; set; }
+        [Required]
+        [Display(Name ="Curriculum Name")]
         public string Name { get; set; }
+        [Display(Name = "Curriculum Description")]
         public string Description { get; set; }
+        [Required]
+        [Display(Name = "Z Score or Result Mean")]
         public string ZorMean { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

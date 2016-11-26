@@ -943,6 +943,7 @@
     </Compile>
     <Compile Include="Controllers\OL_CurriculumController.cs" />
     <Compile Include="Controllers\AL_CurriculumController.cs" />
+    <Compile Include="Controllers\SportsnExtra_LevelController.cs" />
     <Compile Include="ZScore.cs">
       <DependentUpon>AUSHDataModel.tt</DependentUpon>
     </Compile>
@@ -996,6 +997,11 @@
     <Content Include="Views\AL_Curriculum\Details.cshtml" />
     <Content Include="Views\AL_Curriculum\Edit.cshtml" />
     <Content Include="Views\AL_Curriculum\Index.cshtml" />
+    <Content Include="Views\SportsnExtra_Level\Create.cshtml" />
+    <Content Include="Views\SportsnExtra_Level\Delete.cshtml" />
+    <Content Include="Views\SportsnExtra_Level\Details.cshtml" />
+    <Content Include="Views\SportsnExtra_Level\Edit.cshtml" />
+    <Content Include="Views\SportsnExtra_Level\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

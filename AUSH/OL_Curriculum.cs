@@ -11,7 +11,8 @@ namespace AUSH
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class OL_Curriculum
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,10 @@ namespace AUSH
         }
     
         public int OLCurID { get; set; }
+        [Required]
+        [Display(Name = "Curriculum Name")]
         public string Name { get; set; }
+        [Display(Name = "Curriculum Description")]
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
